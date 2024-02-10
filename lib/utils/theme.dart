@@ -11,6 +11,7 @@ var lightTheme = ThemeData(
     primaryContainer: lDivColor,
     onPrimaryContainer: lFontColor,
     onSecondaryContainer: lLabelColor,
+    brightness: Brightness.light,
   ),
 );
 
@@ -18,11 +19,12 @@ var lightTheme = ThemeData(
 var darkTheme = ThemeData(
   useMaterial3: true,
   colorScheme: const ColorScheme.dark(
-      primary: dPrimaryColor,
-      background: dBgColor,
-      onBackground: dFontColor,
-      primaryContainer: dDivColor,
-      onPrimaryContainer: dFontColor,
-      onSecondaryContainer: dLabelColor,
-      brightness: Brightness.dark),
+    primary: dPrimaryColor,
+    background: dBgColor,
+    onBackground: dFontColor,
+    primaryContainer: dDivColor,
+    onPrimaryContainer: dFontColor,
+    onSecondaryContainer: dLabelColor,
+    brightness: Brightness.dark,
+  ),
 );
