@@ -28,7 +28,7 @@ class GenderButton extends StatelessWidget {
               color: Theme.of(context).colorScheme.onPrimary,
               fontWeight: FontWeight.w600,
             ),
-          )
+          ),
         ],
       ),
     );
