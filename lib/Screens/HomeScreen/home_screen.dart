@@ -1,4 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:health_estimator/Screens/HomeScreen/age_selector.dart';
+import 'package:health_estimator/Screens/HomeScreen/gender_button.dart';
+import 'package:health_estimator/Screens/HomeScreen/height_selector.dart';
+import 'package:health_estimator/Screens/HomeScreen/weight_selector.dart';
+import 'package:health_estimator/Utils/Config/app_images.dart';
+import 'package:health_estimator/Widgets/custom_button.dart';
 
 import '../../Utils/Config/app_text.dart';
 
@@ -8,15 +14,12 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Column(
-        children: [
-          const SizedBox(height: 38.0),
-          Padding(
-            padding: const EdgeInsets.symmetric(
-              horizontal: 42.0,
-              vertical: 18.0,
-            ),
-            child: Text(
+      body: Padding(
+        padding: const EdgeInsets.all(12.0),
+        child: Column(
+          children: [
+            const SizedBox(height: 28.0),
+            Text(
               AppTextStrings.appName,
               style: TextStyle(
                 color: Theme.of(context).colorScheme.primary.withOpacity(0.85),
@@ -25,28 +28,55 @@ class HomeScreen extends StatelessWidget {
               ),
               textAlign: TextAlign.justify,
             ),
-          ),
-          Text(
-            "Gender",
-            style: TextStyle(
-              color: Theme.of(context).colorScheme.primary.withOpacity(0.85),
-              fontSize: 28,
-              fontWeight: FontWeight.bold,
+            Text(
+              "Gender",
+              style: TextStyle(
+                color: Theme.of(context).colorScheme.primary.withOpacity(0.85),
+                fontSize: 28,
+                fontWeight: FontWeight.bold,
+              ),
+              textAlign: TextAlign.justify,
             ),
-            textAlign: TextAlign.justify,
-          ),
-          Row(
-            children: [
-              CircleAvatar(
-                radius: 100,
-                backgroundImage: AssetImage(
-                  "assets/Images/maleAvatar.png",
-                ),
-                backgroundColor: Colors.indigo,
-              )
-            ],
-          )
-        ],
+            Padding(
+              padding: const EdgeInsets.all(12.0),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  GenderButton(
+                    image: AppImageStrings.maleAvatarImage,
+                    imageText: "Male",
+                    onTap: () {},
+                  ),
+                  GenderButton(
+                    image: AppImageStrings.femaleAvatarImage,
+                    imageText: "Female",
+                    onTap: () {},
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(height: 20),
+            const Expanded(
+              child: Row(
+                children: [
+                  Expanded(
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        AgeSelector(),
+                        WeightSelector(),
+                      ],
+                    ),
+                  ),
+                  SizedBox(width: 12),
+                  HeightSelector(),
+                ],
+              ),
+            ),
+            const SizedBox(height: 18),
+            CustomButton(btnText: "CALCULATE", onTap: () {}),
+          ],
+        ),
       ),
     );
   }
