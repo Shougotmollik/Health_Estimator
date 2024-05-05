@@ -10,13 +10,13 @@ class AppThemes {
       primary: AppColors.primaryColor,
       onPrimary: AppColors.onPrimaryColor,
       secondary: AppColors.secondaryColor,
-      onSecondary: AppColors.secondaryColor,
+      onSecondary: AppColors.onPrimaryColor,
       error: AppColors.errorColor,
       onError: AppColors.secondaryColor,
-      background: AppColors.primaryColor,
+      background: AppColors.scaffoldBg,
       onBackground: AppColors.onPrimaryColor,
-      surface: AppColors.primaryColor,
-      onSurface: AppColors.onPrimaryColor,
+      surface: AppColors.secondaryColor,
+      onSurface: AppColors.secondaryColor,
     ),
   );
   static ThemeData darkTheme = ThemeData(
@@ -32,8 +32,8 @@ class AppThemes {
       onError: AppColors.secondaryColor,
       background: AppColors.onPrimaryColor,
       onBackground: AppColors.secondaryColor,
-      surface: AppColors.primaryColor,
-      onSurface: AppColors.secondaryColor,
+      surface: AppColors.onPrimaryColor,
+      onSurface: AppColors.onPrimaryColor,
     ),
   );
 }
