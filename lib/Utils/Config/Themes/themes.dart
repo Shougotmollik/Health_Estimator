@@ -24,7 +24,7 @@ class AppThemes {
     scaffoldBackgroundColor: AppColors.onPrimaryColor,
     colorScheme: const ColorScheme(
       brightness: Brightness.dark,
-      primary: AppColors.onPrimaryColor,
+      primary: AppColors.primaryColor,
       onPrimary: AppColors.secondaryColor,
       secondary: AppColors.secondaryColor,
       onSecondary: AppColors.secondaryColor,
