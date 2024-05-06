@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:syncfusion_flutter_sliders/sliders.dart';
 
 class HeightSelector extends StatelessWidget {
   const HeightSelector({super.key});
@@ -28,15 +27,31 @@ class HeightSelector extends StatelessWidget {
               ),
             ),
             Expanded(
-              child: SfSlider.vertical(
-                value: 20,
-                onChanged: (dynamic) {},
-                showTicks: true,
-                showLabels: true,
-                min: 0,
-                max: 200,
-                interval: 20,
-                minorTicksPerInterval: 1,
+              child: Row(
+                children: [
+                  Expanded(
+                    child: RotatedBox(
+                      quarterTurns: 3,
+                      child: Slider(
+                        value: 180.toDouble(),
+                        min: 120,
+                        max: 220,
+                        onChanged: (value) {},
+                      ),
+                    ),
+                  ),
+                  Text(
+                    "110",
+                    style: TextStyle(
+                      color: Theme.of(context)
+                          .colorScheme
+                          .onPrimary
+                          .withOpacity(0.75),
+                      fontWeight: FontWeight.bold,
+                      fontSize: 52,
+                    ),
+                  ),
+                ],
               ),
             )
           ],
