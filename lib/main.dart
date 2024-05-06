@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 import 'package:health_estimator/Screens/WelcomeScreen/welcome_screen.dart';
 import 'package:health_estimator/Utils/Config/Themes/themes.dart';
 
@@ -11,7 +12,7 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return GetMaterialApp(
       title: "Health Estimator",
       debugShowCheckedModeBanner: false,
       themeMode: ThemeMode.system,
